@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Syeda Mihad Fathime</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Arial',sans-serif;
+}
+
+body{
+background:#0a0f1c;
+color:white;
+overflow-x:hidden;
+}
+
+/* Navigation */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+position:fixed;
+width:100%;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+}
+
+nav h2{
+color:#00f5ff;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00f5ff;
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+color:#00f5ff;
+text-shadow:0 0 20px #00f5ff;
+}
+
+.hero span{
+color:#9ac0e2;
+}
+
+.hero p{
+margin-top:20px;
+font-size:20px;
+}
+
+.btn{
+margin-top:30px;
+padding:12px 30px;
+border:2px solid #00f5ff;
+background:transparent;
+color:#00f5ff;
+cursor:pointer;
+border-radius:30px;
+box-shadow:0 0 15px #00f5ff;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#00f5ff;
+color:black;
+}
+
+/* Sections */
+
+section{
+padding:100px 10%;
+}
+
+.title{
+font-size:35px;
+margin-bottom:40px;
+color:#00f5ff;
+}
+
+/* About */
+
+.about{
+max-width:800px;
+}
+
+/* Skills */
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+.skill{
+background:rgba(255,255,255,0.05);
+padding:20px;
+text-align:center;
+border-radius:10px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.skill:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00f5ff;
+}
+
+/* Projects */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px #5cb6f6;
+}
+
+.card h3{
+color:#8b5cf6;
+}
+
+/* Contact */
+
+.contact{
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+background:transparent;
+border:1px solid #00f5ff;
+color:white;
+border-radius:5px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+footer .social{
+display:flex;
+justify-content:center;
+gap:20px;
+margin:15px 0 0;
+}
+
+footer .social a{
+color:#00f5ff;
+text-decoration:none;
+border:1px solid rgba(0,245,255,0.5);
+padding:10px 14px;
+border-radius:999px;
+transition:0.2s;
+}
+
+footer .social a:hover{
+background:rgba(0,245,255,0.1);
+}
+
+/* Background animation */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<nav>
+<h2>MIHAD</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero" id="home">
+<h1>Hey, <span>  I'm Syeda Mihad Fathime</span></h1>
+<p id="typing"></p>
+<a href="#projects" class="btn">View My Work</a>
+</section>
+
+<section id="about">
+<h2 class="title">About Me</h2>
+<p class="about">
+I am a First Year AI&DS Student at UVCE with a passion for technology and problem-solving.
+Im always eager to learn new skills and take on challenges that allow me to grow as a developer and individual.
+currently exploring various programming languages and technologies to expand my knowledge and contribute to exciting projects in the future.
+
+</p>
+</section>
+
+<section id="skills">
+<h2 class="title">Skills</h2>
+<div class="skills">
+<div class="skill">HTML</div>
+<div class="skill">C</div>
+<div class="skill">Java</div>
+<div class="skill">Python</div>
+<div class="skill">problem solving </div>
+<div class="skill">C++</div>
+<div class="skill">communication skills</div>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="title">Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>Currency Converter</h3>
+<p>Real time currency converter using API.</p>
+</div>
+
+<div class="card">
+<h3>Hang man game </h3>
+<p>Hang man game using C</p>
+</div>
+
+<div class="card">
+<h3>Resume Builder using JAVA</h3>
+<p>Simple resume builder application using Java.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<h2 class="title">Contact</h2>
+
+
+<form action="https://formspree.io/f/mwvrejow" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Message" required></textarea>
+
+<button type="submit" class="btn">Send</button>
+
+</form>
+
+</section>
+
+<footer>
+<p>© 2026 Mihad | personal Portfolio webpage</p>
+<div class="social">
+<a href="https://github.com/mihadsyedafathime106-bit" target="_blank" rel="noopener">GitHub</a>
+<a href="https://www.linkedin.com/in/syeda-mihad-fathime-5456a538b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://www.instagram.com/fathime_mih06?igsh=Y2tyNTV6bmh3Y29p" target="_blank" rel="noopener">Instagram</a>
+</div>
+</footer>
+
+<script>
+
+/* Typing animation */
+
+const text = "1st Year AIDS Student| Tech enthusiast | Problem Solver";
+let i = 0;
+
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,80);
+}
+}
+
+typing();
+
+/* Particle background */
+
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particlesArray = [];
+
+class Particle{
+constructor(){
+this.x = Math.random()*canvas.width;
+this.y = Math.random()*canvas.height;
+this.size = Math.random()*2;
+this.speedX = Math.random()*1-0.5;
+this.speedY = Math.random()*1-0.5;
+}
+
+update(){
+this.x += this.speedX;
+this.y += this.speedY;
+}
+
+draw(){
+ctx.fillStyle = "#00f5ff";
+ctx.beginPath();
+ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+ctx.fill();
+}
+}
+
+function init(){
+for(let i=0;i<100;i++){
+particlesArray.push(new Particle());
+}
+}
+
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+for(let i=0;i<particlesArray.length;i++){
+particlesArray[i].update();
+particlesArray[i].draw();
+}
+
+requestAnimationFrame(animate);
+}
+
+init();
+animate();
+html {
+scroll-behavior:smooth;
+}
+
+</script>
+
+</body>
+</html>
